@@ -1,10 +1,8 @@
-file = "pairs.txt"
+file = "input.txt"
 def get_ab(pair):
 	raw_ab = pair.split(",")
-	a = raw_ab[0].split("-")
-	b = raw_ab[1].split("-")
-	for i in range(2):
-		a[i], b[i] = int(a[i]), int(b[i])
+	a = [int(i) for i in raw_ab[0].split("-")]
+	b = [int(i) for i in raw_ab[1].split("-")]
 	return a, b
 
 def p1(file):
