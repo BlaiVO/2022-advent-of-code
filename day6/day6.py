@@ -2,9 +2,7 @@ file = "data.txt"
 
 def get_x_different(line, x):
 	for i in range(len(line)):
-		current = []
-		for y in range(x):
-			current.append(line[i + y])
+		current = [line[i + y] for y in range(x)]
 		if len(current) == len(set(current)):
 			return i + x
 
